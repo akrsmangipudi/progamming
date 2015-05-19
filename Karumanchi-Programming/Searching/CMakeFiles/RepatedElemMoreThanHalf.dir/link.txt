@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/RepatedElemMoreThanHalf.dir/MoreThanHalfRepeatedElem.c.o  -o RepatedElemMoreThanHalf -rdynamic 

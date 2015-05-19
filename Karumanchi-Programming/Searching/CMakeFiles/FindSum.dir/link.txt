@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/FindSum.dir/FindTwoElementsWithGivenSum.cpp.o  -o FindSum -rdynamic 

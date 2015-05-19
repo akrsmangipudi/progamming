@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/Segreate0s1s2s.dir/Segreate0s1s2s.cpp.o  -o Segreate0s1s2s -rdynamic 

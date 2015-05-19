@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/PythogoranTriplet.dir/PythagoreanTriplet.cpp.o  -o PythogoranTriplet -rdynamic 
