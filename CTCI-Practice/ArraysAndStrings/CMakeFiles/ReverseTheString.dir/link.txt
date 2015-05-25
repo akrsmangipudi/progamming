@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/ReverseTheString.dir/ReverseTheString.c.o  -o ReverseTheString -rdynamic 

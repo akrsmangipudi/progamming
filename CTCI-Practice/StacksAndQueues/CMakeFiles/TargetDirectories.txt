@@ -1,0 +1,3 @@
+/home/aditya/Programming/CTCI-Practice/StacksAndQueues/CMakeFiles/DescendingOrderInStacks.dir
+/home/aditya/Programming/CTCI-Practice/StacksAndQueues/CMakeFiles/KStacksUsingArray.dir
+/home/aditya/Programming/CTCI-Practice/StacksAndQueues/CMakeFiles/TowersOfHanoi.dir

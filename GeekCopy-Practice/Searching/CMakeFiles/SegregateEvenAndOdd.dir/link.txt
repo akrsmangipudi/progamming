@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/SegregateEvenAndOdd.dir/SegregateEvenAndOdd.cpp.o  -o SegregateEvenAndOdd -rdynamic 

@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/MaxElemMinElemWithoutComparison.dir/MaxElemMinElemWithoutComparison.c.o  -o MaxElemMinElemWithoutComparison -rdynamic 

@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/GameOfMasterMind.dir/GameOfMasterMind.c.o  -o GameOfMasterMind -rdynamic 

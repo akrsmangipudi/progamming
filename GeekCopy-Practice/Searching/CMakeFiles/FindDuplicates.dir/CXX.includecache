@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aditya/Programming/GeekCopy-Practice/Searching/FindDuplicatesInArray.cpp
+stlHeader.h
+/home/aditya/Programming/GeekCopy-Practice/Searching/stlHeader.h
+algorithm
+-
+iterator
+-
+map
+-
+string
+-
+stdlib.h
+-
+
+/home/aditya/Programming/GeekCopy-Practice/Searching/stlHeader.h
+iostream
+-
+vector
+-
+

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(LinkedLists C CXX)
+add_definitions(-g -DDEBUG)
+add_executable(RemovingDuplicatesInUnsortedLL RemovingDuplicatesInUnsortedLL.c)
+add_executable(ReturnKthElementFromLast ReturnKthElementFromLast.c)
+add_executable(RemoveNodeGivenPointerToIt RemoveNodeGivenPointerToIt.c)
+add_executable(CheckIfPalindromeOrNot CheckIfPalindromeOrNot.cpp)

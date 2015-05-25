@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/SwapTwoNumbersUsingXOR.dir/SwapTwoNumbersUsingXOR.c.o  -o SwapTwoNumbersUsingXOR -rdynamic 

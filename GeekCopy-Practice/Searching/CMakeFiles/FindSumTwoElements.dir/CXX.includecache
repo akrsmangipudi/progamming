@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aditya/Programming/GeekCopy-Practice/Searching/FindTwoElementsWithGivenSum.cpp
+stlHeader.h
+/home/aditya/Programming/GeekCopy-Practice/Searching/stlHeader.h
+algorithm
+-
+iterator
+-
+map
+-
+
+/home/aditya/Programming/GeekCopy-Practice/Searching/stlHeader.h
+iostream
+-
+vector
+-
+

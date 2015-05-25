@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(LinkedLists C CXX)
+add_definitions(-g -DDEBUG)
+add_executable(KStacksUsingArray KStacksUsingArray.cpp)
+add_executable(TowersOfHanoi TowersOfHanoi.c)
+add_executable(DescendingOrderInStacks DescendingOrderInStacks.cpp)

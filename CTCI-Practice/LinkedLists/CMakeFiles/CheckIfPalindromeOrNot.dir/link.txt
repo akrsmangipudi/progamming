@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/CheckIfPalindromeOrNot.dir/CheckIfPalindromeOrNot.cpp.o  -o CheckIfPalindromeOrNot -rdynamic 

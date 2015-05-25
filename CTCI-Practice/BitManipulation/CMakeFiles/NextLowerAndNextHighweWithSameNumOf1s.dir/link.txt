@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/NextLowerAndNextHighweWithSameNumOf1s.dir/NextLowerAndNextHighweWithSameNumOf1s.c.o  -o NextLowerAndNextHighweWithSameNumOf1s -rdynamic 

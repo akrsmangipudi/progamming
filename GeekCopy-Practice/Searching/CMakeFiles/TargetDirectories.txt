@@ -1,0 +1,12 @@
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/CountNuOfOccurances.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/FindDuplicates.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/FindSumThreeElements.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/FindSumTwoElements.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/IncAndDec.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/MaxRepeatingElement.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/PythogoranTriplet.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/RowWiseColumnWiseIncreasing.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/Segregate0s1s2s.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/SegregateEvenAndOdd.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/SumOfThreeElements.dir
+/home/aditya/Programming/GeekCopy-Practice/Searching/CMakeFiles/TwoElemSumClosestToZero.dir

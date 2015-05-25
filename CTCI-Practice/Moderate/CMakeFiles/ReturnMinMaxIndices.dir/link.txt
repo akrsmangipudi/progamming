@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/ReturnMinMaxIndices.dir/ReturnMinMaxIndices.c.o  -o ReturnMinMaxIndices -rdynamic 

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aditya/Programming/GeekCopy-Practice/Searching/MaxRepeatingElementInArray.cpp
+iostream
+-
+algorithm
+-
+iterator
+-
+stlHeader.h
+/home/aditya/Programming/GeekCopy-Practice/Searching/stlHeader.h
+map
+-
+
+/home/aditya/Programming/GeekCopy-Practice/Searching/stlHeader.h
+iostream
+-
+vector
+-
+

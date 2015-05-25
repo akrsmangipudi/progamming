@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aditya/Programming/GeekCopy-Practice/Searching/ThreeElementsWhoseSumIsClosestToZero.cpp
+stdio.h
+-
+algorithm
+-
+stdlib.h
+-
+

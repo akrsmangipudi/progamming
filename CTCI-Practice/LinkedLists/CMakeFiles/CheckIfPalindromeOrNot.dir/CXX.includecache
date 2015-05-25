@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aditya/Programming/CTCI-Practice/LinkedLists/CheckIfPalindromeOrNot.cpp
+iostream
+-
+stlHeader.h
+/home/aditya/Programming/CTCI-Practice/LinkedLists/stlHeader.h
+stack
+-
+
+/home/aditya/Programming/CTCI-Practice/LinkedLists/stlHeader.h
+stdio.h
+-
+stdlib.h
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/TowersOfHanoi.dir/TowersOfHanoi.c.o  -o TowersOfHanoi -rdynamic 

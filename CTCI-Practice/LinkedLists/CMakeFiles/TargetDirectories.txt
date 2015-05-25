@@ -1,0 +1,4 @@
+/home/aditya/Programming/CTCI-Practice/LinkedLists/CMakeFiles/CheckIfPalindromeOrNot.dir
+/home/aditya/Programming/CTCI-Practice/LinkedLists/CMakeFiles/RemoveNodeGivenPointerToIt.dir
+/home/aditya/Programming/CTCI-Practice/LinkedLists/CMakeFiles/RemovingDuplicatesInUnsortedLL.dir
+/home/aditya/Programming/CTCI-Practice/LinkedLists/CMakeFiles/ReturnKthElementFromLast.dir

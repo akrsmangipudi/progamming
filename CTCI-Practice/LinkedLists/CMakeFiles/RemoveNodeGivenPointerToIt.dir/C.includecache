@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/aditya/Programming/CTCI-Practice/LinkedLists/RemoveNodeGivenPointerToIt.c
+stlHeader.h
+/home/aditya/Programming/CTCI-Practice/LinkedLists/stlHeader.h
+
+/home/aditya/Programming/CTCI-Practice/LinkedLists/stlHeader.h
+stdio.h
+-
+stdlib.h
+-
+

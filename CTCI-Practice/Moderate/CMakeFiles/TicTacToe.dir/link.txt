@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/TicTacToe.dir/TicTacToe.c.o  -o TicTacToe -rdynamic 

@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/ReverseWords.dir/ReverseWords.c.o  -o ReverseWords -rdynamic 
