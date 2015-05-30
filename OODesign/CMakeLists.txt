@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(Design C CXX)
+add_definitions(-g -DDEBUG)
+add_executable(BuildingDesign BuildingDesign.cpp)
+add_executable(SingleTonClassPattern SingleTonClassPattern.cpp)

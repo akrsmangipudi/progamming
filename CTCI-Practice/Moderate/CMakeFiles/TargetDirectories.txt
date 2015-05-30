@@ -1,5 +1,7 @@
 /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles/FindNumberOfTrailingZeroes.dir
 /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles/GameOfMasterMind.dir
+/home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles/IntegerToEnglishPhrase.dir
+/home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles/LargestSumContiguousSubarray.dir
 /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles/MaxElemMinElemWithoutComparison.dir
 /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles/ReturnMinMaxIndices.dir
 /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles/SwapTwoNumbersUsingXOR.dir

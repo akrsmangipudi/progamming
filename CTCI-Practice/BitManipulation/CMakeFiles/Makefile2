@@ -88,6 +88,76 @@ clean: CMakeFiles/NextLowerAndNextHighweWithSameNumOf1s.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/NumOfBitsToFlip.dir
+
+# All Build rule for target.
+CMakeFiles/NumOfBitsToFlip.dir/all:
+	$(MAKE) -f CMakeFiles/NumOfBitsToFlip.dir/build.make CMakeFiles/NumOfBitsToFlip.dir/depend
+	$(MAKE) -f CMakeFiles/NumOfBitsToFlip.dir/build.make CMakeFiles/NumOfBitsToFlip.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles  2
+	@echo "Built target NumOfBitsToFlip"
+.PHONY : CMakeFiles/NumOfBitsToFlip.dir/all
+
+# Include target in all.
+all: CMakeFiles/NumOfBitsToFlip.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/NumOfBitsToFlip.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NumOfBitsToFlip.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles 0
+.PHONY : CMakeFiles/NumOfBitsToFlip.dir/rule
+
+# Convenience name for target.
+NumOfBitsToFlip: CMakeFiles/NumOfBitsToFlip.dir/rule
+.PHONY : NumOfBitsToFlip
+
+# clean rule for target.
+CMakeFiles/NumOfBitsToFlip.dir/clean:
+	$(MAKE) -f CMakeFiles/NumOfBitsToFlip.dir/build.make CMakeFiles/NumOfBitsToFlip.dir/clean
+.PHONY : CMakeFiles/NumOfBitsToFlip.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/NumOfBitsToFlip.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SwapBitsAtEvenOddPositions.dir
+
+# All Build rule for target.
+CMakeFiles/SwapBitsAtEvenOddPositions.dir/all:
+	$(MAKE) -f CMakeFiles/SwapBitsAtEvenOddPositions.dir/build.make CMakeFiles/SwapBitsAtEvenOddPositions.dir/depend
+	$(MAKE) -f CMakeFiles/SwapBitsAtEvenOddPositions.dir/build.make CMakeFiles/SwapBitsAtEvenOddPositions.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles  3
+	@echo "Built target SwapBitsAtEvenOddPositions"
+.PHONY : CMakeFiles/SwapBitsAtEvenOddPositions.dir/all
+
+# Include target in all.
+all: CMakeFiles/SwapBitsAtEvenOddPositions.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SwapBitsAtEvenOddPositions.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SwapBitsAtEvenOddPositions.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles 0
+.PHONY : CMakeFiles/SwapBitsAtEvenOddPositions.dir/rule
+
+# Convenience name for target.
+SwapBitsAtEvenOddPositions: CMakeFiles/SwapBitsAtEvenOddPositions.dir/rule
+.PHONY : SwapBitsAtEvenOddPositions
+
+# clean rule for target.
+CMakeFiles/SwapBitsAtEvenOddPositions.dir/clean:
+	$(MAKE) -f CMakeFiles/SwapBitsAtEvenOddPositions.dir/build.make CMakeFiles/SwapBitsAtEvenOddPositions.dir/clean
+.PHONY : CMakeFiles/SwapBitsAtEvenOddPositions.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/SwapBitsAtEvenOddPositions.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

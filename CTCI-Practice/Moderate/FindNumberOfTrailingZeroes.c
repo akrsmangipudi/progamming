@@ -13,7 +13,7 @@ int FindNumOfTrailingZeroes( int num )
 
 int main()
 {
-	int num = 612894;
+	int num = 1808548329;
 	printf("\n Number Of trailing zeroes in %d factorial is %d. \n", num, FindNumOfTrailingZeroes( num ) ); 
 	return 0;
 }

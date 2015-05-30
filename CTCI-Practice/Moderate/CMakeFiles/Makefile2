@@ -123,13 +123,83 @@ clean: CMakeFiles/GameOfMasterMind.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/IntegerToEnglishPhrase.dir
+
+# All Build rule for target.
+CMakeFiles/IntegerToEnglishPhrase.dir/all:
+	$(MAKE) -f CMakeFiles/IntegerToEnglishPhrase.dir/build.make CMakeFiles/IntegerToEnglishPhrase.dir/depend
+	$(MAKE) -f CMakeFiles/IntegerToEnglishPhrase.dir/build.make CMakeFiles/IntegerToEnglishPhrase.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  3
+	@echo "Built target IntegerToEnglishPhrase"
+.PHONY : CMakeFiles/IntegerToEnglishPhrase.dir/all
+
+# Include target in all.
+all: CMakeFiles/IntegerToEnglishPhrase.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/IntegerToEnglishPhrase.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/IntegerToEnglishPhrase.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles 0
+.PHONY : CMakeFiles/IntegerToEnglishPhrase.dir/rule
+
+# Convenience name for target.
+IntegerToEnglishPhrase: CMakeFiles/IntegerToEnglishPhrase.dir/rule
+.PHONY : IntegerToEnglishPhrase
+
+# clean rule for target.
+CMakeFiles/IntegerToEnglishPhrase.dir/clean:
+	$(MAKE) -f CMakeFiles/IntegerToEnglishPhrase.dir/build.make CMakeFiles/IntegerToEnglishPhrase.dir/clean
+.PHONY : CMakeFiles/IntegerToEnglishPhrase.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/IntegerToEnglishPhrase.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/LargestSumContiguousSubarray.dir
+
+# All Build rule for target.
+CMakeFiles/LargestSumContiguousSubarray.dir/all:
+	$(MAKE) -f CMakeFiles/LargestSumContiguousSubarray.dir/build.make CMakeFiles/LargestSumContiguousSubarray.dir/depend
+	$(MAKE) -f CMakeFiles/LargestSumContiguousSubarray.dir/build.make CMakeFiles/LargestSumContiguousSubarray.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  4
+	@echo "Built target LargestSumContiguousSubarray"
+.PHONY : CMakeFiles/LargestSumContiguousSubarray.dir/all
+
+# Include target in all.
+all: CMakeFiles/LargestSumContiguousSubarray.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/LargestSumContiguousSubarray.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/LargestSumContiguousSubarray.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles 0
+.PHONY : CMakeFiles/LargestSumContiguousSubarray.dir/rule
+
+# Convenience name for target.
+LargestSumContiguousSubarray: CMakeFiles/LargestSumContiguousSubarray.dir/rule
+.PHONY : LargestSumContiguousSubarray
+
+# clean rule for target.
+CMakeFiles/LargestSumContiguousSubarray.dir/clean:
+	$(MAKE) -f CMakeFiles/LargestSumContiguousSubarray.dir/build.make CMakeFiles/LargestSumContiguousSubarray.dir/clean
+.PHONY : CMakeFiles/LargestSumContiguousSubarray.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/LargestSumContiguousSubarray.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/MaxElemMinElemWithoutComparison.dir
 
 # All Build rule for target.
 CMakeFiles/MaxElemMinElemWithoutComparison.dir/all:
 	$(MAKE) -f CMakeFiles/MaxElemMinElemWithoutComparison.dir/build.make CMakeFiles/MaxElemMinElemWithoutComparison.dir/depend
 	$(MAKE) -f CMakeFiles/MaxElemMinElemWithoutComparison.dir/build.make CMakeFiles/MaxElemMinElemWithoutComparison.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  5
 	@echo "Built target MaxElemMinElemWithoutComparison"
 .PHONY : CMakeFiles/MaxElemMinElemWithoutComparison.dir/all
 
@@ -164,7 +234,7 @@ clean: CMakeFiles/MaxElemMinElemWithoutComparison.dir/clean
 CMakeFiles/ReturnMinMaxIndices.dir/all:
 	$(MAKE) -f CMakeFiles/ReturnMinMaxIndices.dir/build.make CMakeFiles/ReturnMinMaxIndices.dir/depend
 	$(MAKE) -f CMakeFiles/ReturnMinMaxIndices.dir/build.make CMakeFiles/ReturnMinMaxIndices.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  6
 	@echo "Built target ReturnMinMaxIndices"
 .PHONY : CMakeFiles/ReturnMinMaxIndices.dir/all
 
@@ -199,7 +269,7 @@ clean: CMakeFiles/ReturnMinMaxIndices.dir/clean
 CMakeFiles/SwapTwoNumbersUsingXOR.dir/all:
 	$(MAKE) -f CMakeFiles/SwapTwoNumbersUsingXOR.dir/build.make CMakeFiles/SwapTwoNumbersUsingXOR.dir/depend
 	$(MAKE) -f CMakeFiles/SwapTwoNumbersUsingXOR.dir/build.make CMakeFiles/SwapTwoNumbersUsingXOR.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  7
 	@echo "Built target SwapTwoNumbersUsingXOR"
 .PHONY : CMakeFiles/SwapTwoNumbersUsingXOR.dir/all
 
@@ -234,7 +304,7 @@ clean: CMakeFiles/SwapTwoNumbersUsingXOR.dir/clean
 CMakeFiles/TicTacToe.dir/all:
 	$(MAKE) -f CMakeFiles/TicTacToe.dir/build.make CMakeFiles/TicTacToe.dir/depend
 	$(MAKE) -f CMakeFiles/TicTacToe.dir/build.make CMakeFiles/TicTacToe.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/CTCI-Practice/Moderate/CMakeFiles  8
 	@echo "Built target TicTacToe"
 .PHONY : CMakeFiles/TicTacToe.dir/all
 

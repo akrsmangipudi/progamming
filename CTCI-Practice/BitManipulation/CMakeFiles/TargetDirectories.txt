@@ -1,1 +1,3 @@
 /home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles/NextLowerAndNextHighweWithSameNumOf1s.dir
+/home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles/NumOfBitsToFlip.dir
+/home/aditya/Programming/CTCI-Practice/BitManipulation/CMakeFiles/SwapBitsAtEvenOddPositions.dir

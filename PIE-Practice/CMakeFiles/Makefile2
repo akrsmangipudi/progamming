@@ -53,13 +53,48 @@ CMAKE_SOURCE_DIR = /home/aditya/Programming/PIE-Practice
 CMAKE_BINARY_DIR = /home/aditya/Programming/PIE-Practice
 
 #=============================================================================
+# Target rules for target CMakeFiles/CombinationsOfString.dir
+
+# All Build rule for target.
+CMakeFiles/CombinationsOfString.dir/all:
+	$(MAKE) -f CMakeFiles/CombinationsOfString.dir/build.make CMakeFiles/CombinationsOfString.dir/depend
+	$(MAKE) -f CMakeFiles/CombinationsOfString.dir/build.make CMakeFiles/CombinationsOfString.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  1
+	@echo "Built target CombinationsOfString"
+.PHONY : CMakeFiles/CombinationsOfString.dir/all
+
+# Include target in all.
+all: CMakeFiles/CombinationsOfString.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/CombinationsOfString.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/PIE-Practice/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CombinationsOfString.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/PIE-Practice/CMakeFiles 0
+.PHONY : CMakeFiles/CombinationsOfString.dir/rule
+
+# Convenience name for target.
+CombinationsOfString: CMakeFiles/CombinationsOfString.dir/rule
+.PHONY : CombinationsOfString
+
+# clean rule for target.
+CMakeFiles/CombinationsOfString.dir/clean:
+	$(MAKE) -f CMakeFiles/CombinationsOfString.dir/build.make CMakeFiles/CombinationsOfString.dir/clean
+.PHONY : CMakeFiles/CombinationsOfString.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/CombinationsOfString.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/ConvertFromIntToString.dir
 
 # All Build rule for target.
 CMakeFiles/ConvertFromIntToString.dir/all:
 	$(MAKE) -f CMakeFiles/ConvertFromIntToString.dir/build.make CMakeFiles/ConvertFromIntToString.dir/depend
 	$(MAKE) -f CMakeFiles/ConvertFromIntToString.dir/build.make CMakeFiles/ConvertFromIntToString.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  2
 	@echo "Built target ConvertFromIntToString"
 .PHONY : CMakeFiles/ConvertFromIntToString.dir/all
 
@@ -94,7 +129,7 @@ clean: CMakeFiles/ConvertFromIntToString.dir/clean
 CMakeFiles/ConvertFromStringToInt.dir/all:
 	$(MAKE) -f CMakeFiles/ConvertFromStringToInt.dir/build.make CMakeFiles/ConvertFromStringToInt.dir/depend
 	$(MAKE) -f CMakeFiles/ConvertFromStringToInt.dir/build.make CMakeFiles/ConvertFromStringToInt.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  3
 	@echo "Built target ConvertFromStringToInt"
 .PHONY : CMakeFiles/ConvertFromStringToInt.dir/all
 
@@ -129,7 +164,7 @@ clean: CMakeFiles/ConvertFromStringToInt.dir/clean
 CMakeFiles/FirstNonRepeatingCharInWord.dir/all:
 	$(MAKE) -f CMakeFiles/FirstNonRepeatingCharInWord.dir/build.make CMakeFiles/FirstNonRepeatingCharInWord.dir/depend
 	$(MAKE) -f CMakeFiles/FirstNonRepeatingCharInWord.dir/build.make CMakeFiles/FirstNonRepeatingCharInWord.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  4
 	@echo "Built target FirstNonRepeatingCharInWord"
 .PHONY : CMakeFiles/FirstNonRepeatingCharInWord.dir/all
 
@@ -164,7 +199,7 @@ clean: CMakeFiles/FirstNonRepeatingCharInWord.dir/clean
 CMakeFiles/ImplementStackUsingLL.dir/all:
 	$(MAKE) -f CMakeFiles/ImplementStackUsingLL.dir/build.make CMakeFiles/ImplementStackUsingLL.dir/depend
 	$(MAKE) -f CMakeFiles/ImplementStackUsingLL.dir/build.make CMakeFiles/ImplementStackUsingLL.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  5
 	@echo "Built target ImplementStackUsingLL"
 .PHONY : CMakeFiles/ImplementStackUsingLL.dir/all
 
@@ -193,13 +228,48 @@ clean: CMakeFiles/ImplementStackUsingLL.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/PermutationsOfString.dir
+
+# All Build rule for target.
+CMakeFiles/PermutationsOfString.dir/all:
+	$(MAKE) -f CMakeFiles/PermutationsOfString.dir/build.make CMakeFiles/PermutationsOfString.dir/depend
+	$(MAKE) -f CMakeFiles/PermutationsOfString.dir/build.make CMakeFiles/PermutationsOfString.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  6
+	@echo "Built target PermutationsOfString"
+.PHONY : CMakeFiles/PermutationsOfString.dir/all
+
+# Include target in all.
+all: CMakeFiles/PermutationsOfString.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/PermutationsOfString.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/PIE-Practice/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PermutationsOfString.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/PIE-Practice/CMakeFiles 0
+.PHONY : CMakeFiles/PermutationsOfString.dir/rule
+
+# Convenience name for target.
+PermutationsOfString: CMakeFiles/PermutationsOfString.dir/rule
+.PHONY : PermutationsOfString
+
+# clean rule for target.
+CMakeFiles/PermutationsOfString.dir/clean:
+	$(MAKE) -f CMakeFiles/PermutationsOfString.dir/build.make CMakeFiles/PermutationsOfString.dir/clean
+.PHONY : CMakeFiles/PermutationsOfString.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/PermutationsOfString.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/RemoveSpecifiedCharacters.dir
 
 # All Build rule for target.
 CMakeFiles/RemoveSpecifiedCharacters.dir/all:
 	$(MAKE) -f CMakeFiles/RemoveSpecifiedCharacters.dir/build.make CMakeFiles/RemoveSpecifiedCharacters.dir/depend
 	$(MAKE) -f CMakeFiles/RemoveSpecifiedCharacters.dir/build.make CMakeFiles/RemoveSpecifiedCharacters.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  7
 	@echo "Built target RemoveSpecifiedCharacters"
 .PHONY : CMakeFiles/RemoveSpecifiedCharacters.dir/all
 
@@ -234,7 +304,7 @@ clean: CMakeFiles/RemoveSpecifiedCharacters.dir/clean
 CMakeFiles/ReverseWords.dir/all:
 	$(MAKE) -f CMakeFiles/ReverseWords.dir/build.make CMakeFiles/ReverseWords.dir/depend
 	$(MAKE) -f CMakeFiles/ReverseWords.dir/build.make CMakeFiles/ReverseWords.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  8
 	@echo "Built target ReverseWords"
 .PHONY : CMakeFiles/ReverseWords.dir/all
 
@@ -260,6 +330,41 @@ CMakeFiles/ReverseWords.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/ReverseWords.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TelephoneKeyPad.dir
+
+# All Build rule for target.
+CMakeFiles/TelephoneKeyPad.dir/all:
+	$(MAKE) -f CMakeFiles/TelephoneKeyPad.dir/build.make CMakeFiles/TelephoneKeyPad.dir/depend
+	$(MAKE) -f CMakeFiles/TelephoneKeyPad.dir/build.make CMakeFiles/TelephoneKeyPad.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/aditya/Programming/PIE-Practice/CMakeFiles  9
+	@echo "Built target TelephoneKeyPad"
+.PHONY : CMakeFiles/TelephoneKeyPad.dir/all
+
+# Include target in all.
+all: CMakeFiles/TelephoneKeyPad.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TelephoneKeyPad.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/PIE-Practice/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TelephoneKeyPad.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aditya/Programming/PIE-Practice/CMakeFiles 0
+.PHONY : CMakeFiles/TelephoneKeyPad.dir/rule
+
+# Convenience name for target.
+TelephoneKeyPad: CMakeFiles/TelephoneKeyPad.dir/rule
+.PHONY : TelephoneKeyPad
+
+# clean rule for target.
+CMakeFiles/TelephoneKeyPad.dir/clean:
+	$(MAKE) -f CMakeFiles/TelephoneKeyPad.dir/build.make CMakeFiles/TelephoneKeyPad.dir/clean
+.PHONY : CMakeFiles/TelephoneKeyPad.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TelephoneKeyPad.dir/clean
 .PHONY : clean
 
 #=============================================================================

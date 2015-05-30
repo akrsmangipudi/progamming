@@ -39,10 +39,13 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/CombinationsOfString.dir/DependInfo.cmake"
   "CMakeFiles/ConvertFromIntToString.dir/DependInfo.cmake"
   "CMakeFiles/ConvertFromStringToInt.dir/DependInfo.cmake"
   "CMakeFiles/FirstNonRepeatingCharInWord.dir/DependInfo.cmake"
   "CMakeFiles/ImplementStackUsingLL.dir/DependInfo.cmake"
+  "CMakeFiles/PermutationsOfString.dir/DependInfo.cmake"
   "CMakeFiles/RemoveSpecifiedCharacters.dir/DependInfo.cmake"
   "CMakeFiles/ReverseWords.dir/DependInfo.cmake"
+  "CMakeFiles/TelephoneKeyPad.dir/DependInfo.cmake"
   )

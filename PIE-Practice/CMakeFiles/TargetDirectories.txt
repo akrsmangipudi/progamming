@@ -1,6 +1,9 @@
+/home/aditya/Programming/PIE-Practice/CMakeFiles/CombinationsOfString.dir
 /home/aditya/Programming/PIE-Practice/CMakeFiles/ConvertFromIntToString.dir
 /home/aditya/Programming/PIE-Practice/CMakeFiles/ConvertFromStringToInt.dir
 /home/aditya/Programming/PIE-Practice/CMakeFiles/FirstNonRepeatingCharInWord.dir
 /home/aditya/Programming/PIE-Practice/CMakeFiles/ImplementStackUsingLL.dir
+/home/aditya/Programming/PIE-Practice/CMakeFiles/PermutationsOfString.dir
 /home/aditya/Programming/PIE-Practice/CMakeFiles/RemoveSpecifiedCharacters.dir
 /home/aditya/Programming/PIE-Practice/CMakeFiles/ReverseWords.dir
+/home/aditya/Programming/PIE-Practice/CMakeFiles/TelephoneKeyPad.dir

@@ -41,6 +41,8 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/FindNumberOfTrailingZeroes.dir/DependInfo.cmake"
   "CMakeFiles/GameOfMasterMind.dir/DependInfo.cmake"
+  "CMakeFiles/IntegerToEnglishPhrase.dir/DependInfo.cmake"
+  "CMakeFiles/LargestSumContiguousSubarray.dir/DependInfo.cmake"
   "CMakeFiles/MaxElemMinElemWithoutComparison.dir/DependInfo.cmake"
   "CMakeFiles/ReturnMinMaxIndices.dir/DependInfo.cmake"
   "CMakeFiles/SwapTwoNumbersUsingXOR.dir/DependInfo.cmake"

@@ -86,7 +86,7 @@ void ReverseWords_NoExtraBuffer( char *input )
 
 int main()
 {
-	char input[] = "Hello Aditya. Welcome to Microsoft.";
+	char input[] = "Hello Aditya. Have a great day.";
 
 	char *retString = ReverseWords( input );
 
