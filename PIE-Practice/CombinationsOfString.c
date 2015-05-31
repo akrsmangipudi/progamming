@@ -22,7 +22,7 @@ void PrintCombinationsOfString( char *inputStr, char *outputStr, int level, int 
 
 int main()
 {
-	char *inputStr  = "wxyz";
+	char *inputStr  = "abc";
 	char *outputStr = ( char * )malloc( sizeof(char) * ( strlen( inputStr ) + 1 ) );
 
 	PrintCombinationsOfString( inputStr, outputStr, 0, 0, strlen( inputStr ) - 1 );

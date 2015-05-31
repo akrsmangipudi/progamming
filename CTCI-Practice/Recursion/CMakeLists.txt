@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(Recursion C CXX)
+add_definitions(-g -DDEBUG)
+add_executable(Staircase Staircase.cc)
+add_executable(FibonacciSeriesDP FibonacciSeriesDP.c)
+add_executable(NumOfRobotSteps NumOfRobotSteps.cc)
+add_executable(MagicIndexInArray MagicIndexInArray.c)
+add_executable(ParenthesisCombinations ParenthesisCombinations.c)

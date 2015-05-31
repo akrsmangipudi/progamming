@@ -26,7 +26,7 @@ void ConvertNumToChars( char *inputNum, int numOfDigits, char NumToCharMapping[]
 
 int main()
 {
-	char *inputNum = "234";
+	char *inputNum = "23";
 
 	char NumToCharMapping[][4] = { "0", "1", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ" };
 	
