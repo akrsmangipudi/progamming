@@ -1,0 +1,71 @@
+Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
+
+An example is the root-to-leaf path 1->2->3 which represents the number 123.
+
+Find the total sum of all root-to-leaf numbers.
+
+For example,
+
+    1
+   / \
+  2   3
+The root-to-leaf path 1->2 represents the number 12.
+The root-to-leaf path 1->3 represents the number 13.
+
+Return the sum = 12 + 13 = 25.
+
+/**
+ * Definition for binary tree
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+  * };
+ */
+ 
+ unsigned int SizeOfTree( struct TreeNode *root )
+ {
+     if( !root )
+     {
+         return 0;
+     }
+     
+     return 1 + SizeOfTree( root->left ) + SizeOfTree( root->right );
+ }
+ 
+ int sumNum( struct TreeNode *root, char rootToLeaf[], int level )
+ {
+    int sum = 0;
+    if( !root )
+    {
+        return sum;
+    }
+    
+    rootToLeaf[ level ] = root->val + '0';
+    rootToLeaf[ level + 1 ] = '\0';
+    
+    if( !root->left && !root->right )
+    {
+        unsigned int i = 0;
+        while( '\0' != rootToLeaf[ i ] )
+        {
+            sum = sum * 10 + ( rootToLeaf[i] - '0') ;
+            i++;
+        }
+        return sum;
+    }
+    
+    sum += sumNum( root->left, rootToLeaf, level + 1);
+    sum += sumNum( root->right, rootToLeaf, level + 1);
+    
+    return sum;
+ }
+ 
+int sumNumbers(struct TreeNode *root) 
+{
+    unsigned int sizeOfTree = SizeOfTree( root );
+    char rootToLeafPath[ sizeOfTree ];
+    memset( rootToLeafPath, 0, sizeof( rootToLeafPath ));
+    
+    return sumNum( root, rootToLeafPath, 0 );
+}

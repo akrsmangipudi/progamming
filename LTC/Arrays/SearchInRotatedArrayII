@@ -1,0 +1,56 @@
+Follow up for "Search in Rotated Sorted Array":
+What if duplicates are allowed?
+
+Would this affect the run-time complexity? How and why?
+
+Write a function to determine if a given target is in the array.
+
+Show Tags
+
+
+bool rotated_binary_search(int *arr, int low, int high, int target)
+{
+    if( low <= high )
+    {
+        int mid = (low + high)/2;
+        
+        if( arr[mid] == target )
+        {
+            return true;
+        }
+        
+        if( arr[mid] == arr[low] && arr[mid] == arr[high] )
+        {
+            return rotated_binary_search( arr, low, mid - 1, target ) || rotated_binary_search( arr, mid + 1, high, target );
+        }
+        
+        if( arr[mid] < arr[low] )
+        {
+            if( ( target > arr[mid] ) && ( target <= arr[high] ) )
+            {
+                return rotated_binary_search( arr, mid + 1, high, target );
+            }
+            else
+            {
+                return rotated_binary_search( arr, low, mid - 1, target );
+            }
+        }
+        else
+        {
+            if( target >= arr[low] && target < arr[mid] )
+            {
+                return rotated_binary_search( arr, low, mid - 1, target );
+            }
+            else
+            {
+                return rotated_binary_search( arr, mid + 1, high , target );
+            }
+        }
+    }
+    return false;
+}
+
+bool search(int* nums, int numsSize, int target)
+{
+    return rotated_binary_search( nums, 0, numsSize - 1, target );
+}

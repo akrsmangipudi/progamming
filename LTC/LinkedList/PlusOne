@@ -1,0 +1,48 @@
+Given a non-negative number represented as an array of digits, plus one to the number.
+
+The digits are stored such that the most significant digit is at the head of the list.
+
+
+int* plusOne(int* digits, int digitsSize, int* returnSize)
+{
+    int carry = 1;
+
+    int *retArr = ( int * )malloc( sizeof(int) * (1 + digitsSize) );
+    
+    memset( retArr, 0, sizeof(int) * (1 + digitsSize) );
+
+    *returnSize = 1 + digitsSize;
+
+    int inputIterator = digitsSize - 1;
+
+    int outputIterator = digitsSize;
+
+    while( inputIterator >= 0 )
+    {
+        retArr[ outputIterator ] = (carry + digits[ inputIterator ]) % 10;
+
+        carry = (carry + digits[ inputIterator ])/10;
+
+        outputIterator--;
+        inputIterator--;
+    }
+    
+    if( carry > 0 )
+        retArr[ 0 ] = 1;
+        
+
+    int *retArr2 = NULL;
+    if( retArr[0] == 0 )
+    {
+        retArr2 = ( int * )malloc( sizeof(int) * digitsSize );
+        memcpy( retArr2, retArr + 1, sizeof(int) * digitsSize );
+        *returnSize = digitsSize;
+    }
+
+
+    if( retArr[0] == 0 )
+        return retArr2;
+    else
+        return retArr;
+}
+

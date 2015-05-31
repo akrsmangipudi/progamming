@@ -1,0 +1,37 @@
+Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+void convertToBT( int *nums, int low, int high, struct TreeNode **retHead ) 
+{
+    if( low <= high )
+    {
+        int mid = (low + high)/2;
+        (*retHead) = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+        (*retHead)->left  = NULL;
+        (*retHead)->right = NULL;
+        (*retHead)->val   = nums[ mid ];
+        
+        convertToBT( nums, low, mid - 1,   &(*retHead)->left  );
+        convertToBT( nums, mid + 1, high,  &(*retHead)->right );
+    }
+}
+ 
+struct TreeNode* sortedArrayToBST(int* nums, int numsSize)
+{
+    if( !nums )
+        return NULL;
+        
+    struct TreeNode* retHead = NULL;
+    
+    convertToBT( nums, 0,  numsSize - 1, &retHead );
+    
+    return retHead;
+}

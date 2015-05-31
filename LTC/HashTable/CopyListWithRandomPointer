@@ -1,0 +1,62 @@
+A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+
+Return a deep copy of the list.
+
+/**
+ * Definition for singly-linked list with a random pointer.
+ * struct RandomListNode {
+ *     int label;
+ *     struct RandomListNode *next;
+ *     struct RandomListNode *random;
+ * };
+ */
+struct RandomListNode *copyRandomList(struct RandomListNode *head)
+{
+    if( !head )
+        return NULL;
+        
+    struct RandomListNode *copyList = head;
+    
+    while( copyList )
+    {
+        struct RandomListNode *temp = (struct RandomListNode*)malloc(sizeof(struct RandomListNode));
+        temp->label  = copyList->label;
+        temp->next   = copyList->next;
+        temp->random = NULL;
+        copyList->next = temp;
+        copyList = copyList->next->next;
+    }
+    
+    copyList = head;
+    
+    while( copyList )
+    {
+        if( copyList->random )
+        {
+            copyList->next->random = copyList->random->next;
+        }
+        copyList = copyList->next->next;
+    }
+    
+    struct RandomListNode *random = head->next;
+    
+    struct RandomListNode *org  = head;
+    struct RandomListNode *copy = head->next;
+    
+    while( org && copy )
+    {
+        org->next  = copy->next;
+        if( org->next )
+        {
+            copy->next = org->next->next;
+        }
+        else
+        {
+            copy->next = NULL;
+        }
+        
+        org  = org->next;
+        copy = copy->next;
+    }
+    return random;
+}

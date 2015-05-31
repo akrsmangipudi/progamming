@@ -1,0 +1,35 @@
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+How many possible unique paths are there?
+
+class Solution {
+public:
+
+    int NumOfPossiblePaths( map< pair<int, int>, uint32_t > &hashMap, int X, int Y, int currentRow, int currentColumn )
+    {
+        if( ( currentColumn == ( Y - 1 ) ) || ( currentRow == ( X - 1 ) ) ) 
+        {   
+            return 1;
+        }   
+
+        if( hashMap.find( make_pair( currentRow, currentColumn ) ) != hashMap.end() )
+        {       
+            return hashMap[make_pair( currentRow, currentColumn ) ];
+        }   
+
+        hashMap[ make_pair( currentRow, currentColumn ) ] = 
+        NumOfPossiblePaths( hashMap, X, Y, currentRow + 1, currentColumn ) + NumOfPossiblePaths( hashMap, X, Y, currentRow, currentColumn + 1 );
+
+        return hashMap[ make_pair( currentRow, currentColumn ) ];
+    }
+
+    int uniquePaths(int m, int n)
+    {
+        map< pair<int, int>, uint32_t > hashMap;
+        int row = 0, column = 0;
+        
+        return NumOfPossiblePaths( hashMap, m, n, row, column );
+    }
+};

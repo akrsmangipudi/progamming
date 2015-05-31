@@ -1,0 +1,61 @@
+You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+void AddNumbers( struct ListNode* l1, struct ListNode* l2, struct ListNode** result, int carry ) 
+{
+    if( l1 || l2 )
+    {
+        (*result) = (struct ListNode*)malloc(sizeof(struct ListNode));
+        (*result)->next = NULL;
+        
+        if( l1 && l2 )
+        {
+            (*result)->val = (l1->val + l2->val + carry) % 10;
+            carry = (l1->val + l2->val + carry)/10;
+            AddNumbers( l1->next, l2->next, &(*result)->next, carry ) ;
+        }
+        else if( l1 && !l2 )
+        {
+            (*result)->val = (l1->val + carry) % 10;
+            carry = (l1->val + carry)/10;
+            AddNumbers( l1->next, l2, &(*result)->next, carry ) ;
+        }
+        else
+        {
+            (*result)->val = (l2->val + carry) % 10;
+            carry = (l2->val + carry)/10;
+            AddNumbers( l1, l2->next, &(*result)->next, carry ) ;
+        }
+    }
+    else // This is the end condition, we might not have l1, l2; but we might still have a non-zero carry.
+    {
+        if( 0 != carry )
+        {
+            (*result) = (struct ListNode*)malloc(sizeof(struct ListNode));
+            (*result)->next = NULL;
+            (*result)->val  = carry;
+        }
+    }
+    return;
+}
+
+struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
+{
+    if( !l1 && !l2 )
+        return NULL;
+        
+    struct ListNode* result = NULL;
+    
+    AddNumbers( l1, l2, &result, 0 );
+    
+    return result;
+}

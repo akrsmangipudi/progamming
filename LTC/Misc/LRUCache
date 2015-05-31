@@ -1,0 +1,154 @@
+Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and set.
+
+get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+set(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+
+class LRUCache
+{
+public:
+
+    struct QueueNode
+    {
+      int key;
+      int value;
+      QueueNode *prev;
+      QueueNode *next;
+    };
+
+    int NumOfFilledFrames;
+    int TotalNumberOfFrames;
+    
+    QueueNode *head = NULL, *tail = NULL;
+    
+    map< int, QueueNode* > m;
+
+    LRUCache(int capacity)
+    {
+        TotalNumberOfFrames = capacity;
+        NumOfFilledFrames   = 0;
+    }
+    
+    int get(int key)
+    {
+        if( m.find(key) == m.end() )
+        {
+            return -1;
+        }
+        else
+        {
+            // Make the current reference node head of the LL if it is not already the head.
+            QueueNode* newHead = m[key];
+            
+            // Try to make this the new head only when this is not already the head.
+            if( newHead != head )
+            {
+                newHead->prev->next = newHead->next;
+                
+                if( newHead->next )
+                {
+                    newHead->next->prev = newHead->prev;
+                }
+                else // newHead it the tail pointer, update it.
+                {
+                    tail = tail->prev;
+                }
+                
+                newHead->prev = NULL;
+                newHead->next = head;
+                head->prev    = newHead;
+                head = newHead;
+            }
+            
+            return newHead->value;
+        }
+    }
+    
+    bool IsQueueFull()
+    {
+        if( NumOfFilledFrames == TotalNumberOfFrames )
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    void set(int key, int value)
+    {
+        // Element does not exist in hash table, we need to create it and make it the head node in the linked list.
+        if( m.find(key) == m.end() )
+        {
+            // LRU Queue is full. We need to replace the last element in the queue with the incoming element.
+            // Also, we need to delete this element from the hash table.
+            if( IsQueueFull() )
+            {
+                // Get the tail node's key value first.
+                int removeThisKey = tail->key;
+            
+                QueueNode* temp = tail;
+                tail = tail->prev;
+                if( tail )
+                {
+                    tail->next = NULL;
+                }
+                else
+                {
+                    head = NULL;
+                }
+                temp->prev = NULL;
+            
+                m.erase( removeThisKey );
+                //free(temp);
+                NumOfFilledFrames = NumOfFilledFrames - 1;
+                
+            }
+        
+            QueueNode *temp = (QueueNode *)malloc(sizeof(QueueNode));
+            temp->value = value;
+            temp->key = key;
+            
+            if( !head && !tail )
+            {
+                temp->prev = NULL;
+                temp->next = NULL;
+                head = tail = temp;
+            }
+            else // We already have elements in the queue, so we need to have valid head and tail pointers.
+            {
+                temp->prev = NULL;
+                temp->next = head;
+                head->prev = temp;
+                head = temp;
+            }
+            
+            // Update the hash table.
+            m[key] = temp;
+            
+            NumOfFilledFrames = NumOfFilledFrames + 1;
+        }
+        else // element already exists, we just need to make it the head now.
+        {
+            QueueNode* newHead = m[key];
+            newHead->value = value;
+            
+            // Try to make this the new head only when this is not already the head.
+            if( newHead != head )
+            {
+                newHead->prev->next = newHead->next;
+                
+                if( newHead->next )
+                {
+                    newHead->next->prev = newHead->prev;
+                }
+                else // newHead it the tail pointer, update it.
+                {
+                    tail = tail->prev;
+                }
+                
+                newHead->prev  = NULL;
+                newHead->next  = head;
+                head->prev     = newHead;
+                head = newHead;
+            }
+        }
+    }
+};

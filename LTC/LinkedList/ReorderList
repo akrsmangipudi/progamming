@@ -1,0 +1,106 @@
+Given a singly linked list L: L0→L1→…→Ln-1→Ln,
+reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…
+
+You must do this in-place without altering the nodes' values.
+
+For example,
+Given {1,2,3,4}, reorder it to {1,4,2,3}.
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+ 
+struct ListNode* MiddleInLL( struct ListNode* head )
+{
+    if( !head || !head->next )
+        return head;
+        
+    struct ListNode* slowPtr = head;
+    struct ListNode* fastPtr = head->next;
+    
+    while( slowPtr && fastPtr && fastPtr->next )
+    {
+        slowPtr = slowPtr->next;
+        fastPtr = fastPtr->next->next;
+        
+        if( !fastPtr || !fastPtr->next )
+            break;
+    }
+    return slowPtr;
+}
+
+void ReverseList( struct ListNode** head )
+ {
+     if( !(*head) )
+        return;
+        
+     struct ListNode *first = *head;
+     
+     struct ListNode *rest  = (*head)->next;
+     
+     if( !rest )
+        return;
+        
+     ReverseList( & rest );
+     
+     (*head) = rest;
+     
+     first->next->next = first;
+     first->next = NULL;
+ }
+
+void reorderList(struct ListNode* head)
+{
+    if( !head || !head->next || !head->next->next )
+        return;
+        
+    struct ListNode* midElem = MiddleInLL( head );
+    
+    struct ListNode* firstList  = head;
+    struct ListNode* secondList = midElem->next;
+    
+    midElem->next = NULL;
+    
+    ReverseList( &secondList );
+    
+    struct ListNode *result = NULL;
+    struct ListNode **resultPtr = &result;
+    int fromFirst = 1;
+    
+    while( firstList && secondList )
+    {
+        if( fromFirst )
+        {
+            (*resultPtr) = firstList;
+            firstList    = firstList->next;
+        }
+        else
+        {
+            (*resultPtr) = secondList;
+            secondList   = secondList->next;
+        }
+        fromFirst ^= 1;
+        (*resultPtr)->next = NULL;
+        resultPtr = &((*resultPtr)->next);
+    }
+    
+    while( firstList && !secondList )
+    {
+        (*resultPtr) = firstList;
+        firstList    = firstList->next;
+        (*resultPtr)->next = NULL;
+        resultPtr = &((*resultPtr)->next);
+    }
+    
+    while( !firstList && secondList )
+    {
+        (*resultPtr) = secondList;
+        secondList   = secondList->next;
+        (*resultPtr)->next = NULL;
+        resultPtr = &((*resultPtr)->next);
+    }
+}

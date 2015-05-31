@@ -1,0 +1,23 @@
+Given an array of integers, every element appears three times except for one. Find that single one.
+
+Note:
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+int singleNumber(int* nums, int numsSize)
+{
+    int result = 0;
+    
+    int i = 0, j = 0;
+    
+    for( i = sizeof(int) * 8; i >= 0; i-- )
+    {
+        int temp = 0;
+        for( j = 0; j < numsSize; j++ )
+        {
+            temp += ( nums[j] >> i ) & 1;
+        }
+        result = result | ( ( temp % 3 ) << i );
+    }
+    
+    return result;
+}

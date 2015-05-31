@@ -1,0 +1,81 @@
+Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
+
+Each number in C may only be used once in the combination.
+
+Note:
+All numbers (including target) will be positive integers.
+Elements in a combination (a1, a2, … , ak) must be in non-descending order. (ie, a1 ≤ a2 ≤ … ≤ ak).
+The solution set must not contain duplicate combinations.
+For example, given candidate set 10,1,2,7,6,1,5 and target 8, 
+A solution set is: 
+[1, 7] 
+[1, 2, 5] 
+[2, 6] 
+[1, 1, 6] 
+
+
+class Solution {
+public:
+
+    int GetTotalSum( vector<int> &output )
+    {   
+        int retVal = 0;
+        for( int i = 0; i < output.size(); i++ )
+        {
+            retVal += output[i];
+        }
+        return retVal;
+    }   
+
+    void CalculateSolutionSets( vector<int>& input, vector<int>& output, vector<vector<int> >& result, int target, int level, int start, int end, int used[] )
+    {
+        if( GetTotalSum(output) > target )
+        {
+            return;
+        }
+    
+        // Current sum in the output vector elements is equal to the target.
+        if( GetTotalSum( output ) == target )
+        {
+            result.push_back( output );
+            return;
+        }
+        
+        for( int i = start; i <= end; i++ )
+        {
+
+            if( ( i != 0 ) && ( input[i] == input[i-1] ) && ( used[i - 1] != 1 ) ) 
+                continue;
+
+            used[i] = 1;    
+
+            output.push_back( input[i] );
+    
+            CalculateSolutionSets( input, output, result, target, level + 1, i + 1, end, used );
+  
+            output.pop_back();
+    
+            used[i] = 0;    
+        }
+    }   
+
+    vector<vector<int> > combinationSum2(vector<int>& candidates, int target)
+    {   
+        vector<vector<int> > result;
+    
+        if( 0 == candidates.size() )
+            return result;
+    
+        vector<int> outputVector;
+
+        int *used = new int[ candidates.size() ];
+        memset( used, 0, sizeof(int) * candidates.size() );
+    
+        sort( candidates.begin(), candidates.end() );
+
+        CalculateSolutionSets( candidates, outputVector, result, target, 0, 0, candidates.size() - 1, used );
+        
+        return result;
+    }
+
+};

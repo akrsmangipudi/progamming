@@ -1,0 +1,64 @@
+Suppose a sorted array is rotated at some pivot unknown to you beforehand.
+
+(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
+
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+
+You may assume no duplicate exists in the array.
+
+int rotated_binary_search(int *arr, int low, int high, int target)
+{
+    if( low <= high )
+    {
+        int mid = (low + high)/2;
+        
+        if( arr[mid] == target )
+        {
+            return mid;
+        }
+        
+        if( arr[mid] <= arr[low] )
+        {
+            if( arr[mid] == arr[low] )
+            {
+                if( arr[mid] == arr[high] )
+                {
+                    return rotated_binary_search( arr, low, mid - 1, target );
+                }
+                else
+                {
+                    return rotated_binary_search( arr, mid + 1, high , target );
+                }
+            }
+            else
+            {
+                if( target > arr[mid] && target <= arr[ high ] )
+                {
+                    return rotated_binary_search( arr, mid + 1, high , target );
+                }
+                else
+                {
+                    return rotated_binary_search( arr, low, mid - 1, target );
+                }
+            }
+        }
+        else
+        {
+            if( target >= arr[low] && target < arr[mid] )
+            {
+                return rotated_binary_search( arr, low, mid - 1, target );
+            }
+            else
+            {
+                return rotated_binary_search( arr, mid + 1, high , target );
+            }
+        }
+    }
+    return -1;
+}
+
+int search(int* nums, int numsSize, int target)
+{
+    return rotated_binary_search( nums, 0, numsSize - 1, target );
+}
+

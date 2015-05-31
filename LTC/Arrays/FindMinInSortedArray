@@ -1,0 +1,50 @@
+Suppose a sorted array is rotated at some pivot unknown to you beforehand.
+
+(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
+
+Find the minimum element.
+
+You may assume no duplicate exists in the array.
+
+int MinElem( int *arr, int low, int high )
+{
+    if( low <= high )
+    {
+        int mid = (low + high)/2;
+        
+        if( ( ( 0 == mid ) || ( arr[mid] < arr[ mid - 1 ] ) ) && ( ( high == mid ) || ( arr[mid] < arr[mid + 1] ) ) )
+        {
+            return arr[mid];
+        }
+        
+        if( arr[mid] < arr[low] )
+        {
+            if( arr[mid] > arr[high] )
+            {
+                return MinElem( arr, mid + 1, high);
+            }
+            else
+            {
+                return MinElem( arr, low, mid - 1);
+            }
+        }
+        else
+        {
+            if( arr[mid] < arr[high] )
+            {
+                return MinElem( arr, low, mid - 1);
+            }
+            else
+            {
+                return MinElem( arr, mid + 1, high);
+            }
+        }
+    }
+    return -1;
+}
+
+int findMin(int* nums, int numsSize)
+{
+    return MinElem( nums, 0, numsSize - 1 );
+    
+}

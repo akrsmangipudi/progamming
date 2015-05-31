@@ -1,0 +1,50 @@
+Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+
+Follow up:
+Can you solve it without using extra space?
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode *detectCycle(struct ListNode *head)
+{
+    
+    bool cycleExists = false;
+    
+    if( !head || !head->next )
+        return NULL;
+        
+
+    struct ListNode *slow = head;
+    struct ListNode *fast = head;
+    
+    while(fast && fast->next )
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+        
+        if( slow == fast )
+        {
+            cycleExists = true;
+            break;
+        }
+    }
+    
+    if( !cycleExists )
+        return NULL;
+        
+    slow = head;
+    
+    while( slow != fast )
+    {
+        slow = slow->next;
+        fast = fast->next;
+    }
+    
+    return slow;
+    
+}
