@@ -4,8 +4,7 @@
 # include <ctype.h>
 
 // Holds the number of elements in the infix string (source).
-const int MAX = 18;
-
+# define MAX 18
 
 // **************** Infix to Postfix Conversion Algorithm  ***************** //
 // (1) If scanned element is ' ' or '\t', ignore and move to the next element.

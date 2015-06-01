@@ -4,18 +4,11 @@
 # include <ctype.h>
 
 // Holds the number of elements in the infix string (source).
-const int MAX = 18;
-
-
-// **************** Postfix to Prefix Conversion Algorithm  ***************** //
-// (1) If scanned element is ' ' or '\t', ignore and move to the next element.
-// (2) If scanned element is digit or alphabet, push it onto the stack.
-// (3) If scanned element is an operator, pop first two elements from the stack, append 2nd popped element to the operator, followed by the
-//	   first popped element and then push the trio onto the stack !
+# define MAX 18
 
 typedef struct expression
 {
-	char prefix[MAX];
+	char infix[MAX];
 	char opStack[MAX][MAX];
 	char *postfix;
 	int top, length;
@@ -45,12 +38,12 @@ char* pop(expression *e)
 void initExpression(expression *e)
 {
 	e->top = -1;
-	memset(e->prefix, 0, MAX);
+	memset(e->infix, 0, MAX);
 	memset(e->opStack, 0, MAX*MAX);
 	e->postfix = "42$3*3-84/11+/+";
 	e->length = strlen(e->postfix);
 	printf("\n Length: %d, Original: %s \n", e->length, e->postfix);
-	e->prefix[e->length] = '\0';
+	e->infix[e->length] = '\0';
 	memset(e->str1, 0, MAX);
 	memset(e->str2, 0, MAX);
 	memset(e->str3, 0, MAX);
@@ -58,7 +51,7 @@ void initExpression(expression *e)
 	memset(e->temp2, 0, 2);
 }
 
-void convertPostFixToPreFix(expression *e)
+void convertPostFixToInFix(expression *e)
 {
 	while(*(e->postfix))
 	{
@@ -73,8 +66,8 @@ void convertPostFixToPreFix(expression *e)
 			strcpy(e->str3, pop(e));
 			e->temp1[0] = *(e->postfix);
 			e->temp1[1] = '\0';
-			strcpy(e->str1, e->temp1);
-			strcat(e->str1, e->str3);
+			strcpy(e->str1, e->str3);
+			strcat(e->str1, e->temp1);
 			strcat(e->str1, e->str2);
 			push(e, e->str1);	
 		}
@@ -92,8 +85,8 @@ int main()
 {
 	expression e;
 	initExpression(&e);
-	convertPostFixToPreFix(&e);
-	printf("\n Converted prefix expression: ");
+	convertPostFixToInFix(&e);
+	printf("\n Converted infix expression: ");
 	int i = 0;
 	printf("\n %s \n", e.opStack[i]);
 

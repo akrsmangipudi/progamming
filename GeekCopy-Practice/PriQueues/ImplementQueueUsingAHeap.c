@@ -74,11 +74,11 @@ void RestoreDown( int pos, Heap *heapPtr )
 	int pri_val = heapPtr->priority[pos];
 	int arr_val = heapPtr->array[pos];
 
-	if( pri_val == 3 )
-	{
-		printf("\n AM_QC -> pri_val: %d arr_val: %d pos: %d", pri_val, arr_val, pos);
-		printf("\n AM_QC -> heapPtr->Count - 1 = %d", heapPtr->count - 1);
-	}
+//	if( pri_val == 3 )
+//	{
+//		printf("\n AM_QC -> pri_val: %d arr_val: %d pos: %d", pri_val, arr_val, pos);
+//		printf("\n AM_QC -> heapPtr->Count - 1 = %d", heapPtr->count - 1);
+//	}
 
 	while( ( pos < (heapPtr->count - 1) ) && ( pos <= ( (heapPtr->count - 2)/2 + 1 ) ) )
 	{

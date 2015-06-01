@@ -2,7 +2,7 @@
 # include <stdlib.h>
 # include <string.h>
 
-const int MAX_SIZE = 10;
+# define MAX_SIZE 10
 
 int topOne = -1, topTwo = -1;
 int stackOne[MAX_SIZE];

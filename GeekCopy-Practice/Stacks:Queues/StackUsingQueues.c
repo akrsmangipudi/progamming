@@ -2,7 +2,7 @@
 # include <stdlib.h>
 # include <string.h>
 
-const int MAX_SIZE = 10;
+# define MAX_SIZE 10
 
 int frontOne = -1, rearOne = -1;
 int frontTwo = -1, rearTwo = -1;

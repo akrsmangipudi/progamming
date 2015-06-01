@@ -2,7 +2,7 @@
 # include <stdlib.h>
 # include <string.h>
 
-const unsigned int MAX_SIZE  = 10;
+# define MAX_SIZE 10
 
 int top = -1;
 int stackArr[MAX_SIZE];

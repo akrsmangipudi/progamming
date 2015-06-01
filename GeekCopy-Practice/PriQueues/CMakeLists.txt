@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(Searching C CXX)
+add_definitions(-g -DDEBUG)
+add_executable(MaxHeap MaxHeap.c)
+add_executable(MaxHeapMinHeap MaxHeapMinHeap.c)
+add_executable(ImplementStackUsingAHeap ImplementStackUsingAHeap.c)
+add_executable(ImplementQueueUsingAHeap ImplementQueueUsingAHeap.c)
