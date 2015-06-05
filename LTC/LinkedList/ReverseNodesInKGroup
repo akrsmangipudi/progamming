@@ -60,7 +60,6 @@ For k = 3, you should return: 3->2->1->4->5
      if( FindRemainingElements( *head ) < k )
         return;
         
-    
     struct ListNode *LLToReverse = *head;
     
     struct ListNode *ReferenceLLToReverse = *head;
@@ -78,8 +77,6 @@ struct ListNode* reverseKGroup(struct ListNode* head, int k)
     if( !head )
         return NULL;
         
-    struct ListNode* result = NULL;
-    
     ReverseListInGroup( &head, k );
     
     return head;
