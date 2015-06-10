@@ -1,0 +1,58 @@
+Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+
+Example 1:
+
+11110
+11010
+11000
+00000
+Answer: 1
+
+Example 2:
+
+11000
+11000
+00100
+00011
+Answer: 3
+
+void Recurse( char **grid, int row, int col, int mRows, int mCols )
+{
+    if( row < 0 || row > ( mRows - 1 ) || col < 0 || col > ( mCols - 1 ) )
+    {
+        return;
+    }
+    
+    if( grid[ row ][ col ] == '0' || grid[ row ][ col ] == '-' )
+    {
+        return;
+    }    
+
+    grid[ row ][ col ] = '-';
+    
+    Recurse( grid, row - 1, col, mRows, mCols );
+    Recurse( grid, row + 1, col, mRows, mCols );
+    Recurse( grid, row, col - 1, mRows, mCols );
+    Recurse( grid, row, col + 1, mRows, mCols );
+}
+
+int numIslands(char** grid, int gridRowSize, int gridColSize)
+{
+    int retVal = 0;
+    int i_row = 0, j_col = 0;
+    
+    for( i_row = 0; i_row < gridRowSize; i_row++ )
+    {
+        for( j_col = 0; j_col < gridColSize; j_col++ )
+        {
+            if( grid[ i_row ][ j_col ] == '0' || grid[ i_row ][ j_col ] == '-' )
+            {
+                continue;
+            }
+            
+            retVal++;
+            Recurse( grid, i_row, j_col, gridRowSize, gridColSize );
+        }
+    }
+    return retVal;
+}
