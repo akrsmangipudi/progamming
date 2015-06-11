@@ -21,3 +21,5 @@ add_executable(MinNumPossibleAfterRemovingAFewChars MinNumPossibleAfterRemovingA
 add_executable(PostfixEvaluation PostfixEvaluation.cpp)
 add_executable(JosephCircle JosephCircle.cpp)
 add_executable(MaxSumPairInUnsortedArr MaxSumPairInUnsortedArr.c)
+add_executable(RearrangeArray RearrangeArray.c)
+add_executable(FloodFillVariation_GeeksForGeeksArraysPage2 FloodFillVariation_GeeksForGeeksArraysPage2.c)
