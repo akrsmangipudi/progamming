@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(PIE C CXX)
+add_definitions(-g -DDEBUG)
+add_executable( DFSUsingAdjacencyMatrix DFSUsingAdjacencyMatrix.c )
+add_executable( DFSUsingAdjacencyList DFSUsingAdjacencyList.c )
+add_executable( BFSUsingAdjacencyMatrix BFSUsingAdjacencyMatrix.cpp )
