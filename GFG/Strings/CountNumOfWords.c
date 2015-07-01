@@ -20,6 +20,7 @@ unsigned int NumberOfWords( char *inputStr )
 		if( *inputStr == ' ' || *inputStr == '\n' || *inputStr == '\t' )
 		{
 			retVal++;
+			inputStr++;
 
 			while( *inputStr != '\0' && ( *inputStr == ' ' || *inputStr == '\n' || *inputStr == '\t' ) )
 			{
@@ -30,11 +31,11 @@ unsigned int NumberOfWords( char *inputStr )
 			{
 				break;
 			}
-
 		}
-
-		inputStr++;
-
+		else
+		{
+			inputStr++;
+		}
 	}
 	return retVal;
 }
