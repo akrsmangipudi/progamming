@@ -30,9 +30,13 @@ bool AreStringsInterleaved( char *str1, char *str2, char *input )
 
 int main()
 {
-	char str1[]  = "AAAAAEFG";
-	char str2[]  = "AAAAACDE";
-	char input[] = "AAAAACADAEAEAAFG";
+//	char str1[]  = "AAAAAEFG";
+//	char str2[]  = "AAAAACDE";
+//	char input[] = "AAAAACADAEAEAAFG";
+
+	char str1[]  = "cbcccbabbccbbcccbbbcabbbabcababbbbbbaccaccbabbaacbaabbbc";
+	char str2[]  = "abcbbcaababccacbaaaccbabaabbaaabcbababbcccbbabbbcbbb";
+	char input[] = "abcbcccbacbbbbccbcbcacacbbbbacabbbabbcacbcaabcbaaacbcbbbabbbaacacbbaaaabccbcbaabbbaaabbcccbcbabababbbcbbbcbb";
 
 	if( ( strlen( str1 ) + strlen( str2 ) ) == strlen( input ) )
 	{
