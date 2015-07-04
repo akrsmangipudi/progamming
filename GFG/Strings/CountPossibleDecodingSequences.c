@@ -43,7 +43,8 @@ void PrintPossibleMappings( char *input, char *output, unsigned int insertPos, u
 
 int main()
 {
-	char inputNum[] = "121";
+//	char inputNum[] = "121";
+	char inputNum[] = "9371597631128776948387197132267188677349946742344217846154932859125134924241649584251978418763151253";
 
 	char *output = ( char * )malloc( strlen( inputNum ) + 1 );
 	memset( output, 0, strlen( inputNum ) + 1 );

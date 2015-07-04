@@ -1,0 +1,43 @@
+class Solution 
+{
+public:
+    void GenerateParanthesisCombinations( int n, vector<string> &result, string &output, int openIdx, int closeIdx )
+    {   
+        if( openIdx + closeIdx == 2*n )
+        {
+            cout << " Hello " << output.length() << endl;
+            result.push_back( output );
+            return;
+        }
+    
+        if( openIdx < n ) 
+        {
+            output.push_back('('); 
+            GenerateParanthesisCombinations( n, result, output, openIdx + 1, closeIdx );
+            output.pop_back();
+        }
+    
+        if( closeIdx < openIdx )
+        {
+            output.push_back(')'); 
+            GenerateParanthesisCombinations( n, result, output, openIdx, closeIdx + 1 );
+            output.pop_back();
+        }
+    }   
+
+    vector<string> generateParenthesis(int n)
+    {   
+        vector<string> result;
+        result.clear();
+    
+        if( n == 0 ) 
+        {
+            return result;
+        }
+    
+        string output;
+    
+        GenerateParanthesisCombinations( n, result, output, 0, 0 );    
+    }   
+};
+

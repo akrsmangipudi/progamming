@@ -1,0 +1,87 @@
+void reverseString( char *s, unsigned int start, unsigned int end )
+{
+    while( start < end )
+    {
+        char temp = s[start];
+        s[start]  = s[end];
+        s[end]    = temp;
+        start++;
+        end--;
+    }
+}
+
+void reverseWords(char *s)
+{
+    bool atLeastOneWordOccured = false;
+    
+    // Step (1) is to remove all the leading, trailing and multiple words spaces between the words in the given input string.
+    char *src = s, *dst = s;
+    
+    while( *dst != '\0' )
+    {
+        if( *dst == ' ' )
+        {
+            if( atLeastOneWordOccured )
+            {
+                while( *dst != '\0' && *dst == ' ' )
+                {
+                    dst++;
+                }
+                
+                if( *dst == '\0' )
+                {
+                    break;
+                }
+                else
+                {
+                    *src = ' ';
+                    src++;
+                }
+            }
+            else
+            {
+                dst++;   
+            }
+        }
+        else
+        {
+            *src++ = *dst++;
+            atLeastOneWordOccured = true;
+        }
+    }
+    
+    *src = '\0';
+    
+    if( *s == '\0' )
+    {
+        return;
+    }
+    
+    
+    // Step (2) is to reverse the entire input string.
+    reverseString( s, 0, strlen(s) - 1 );
+    
+    // Step (3) is to reverse the individual words in the string.
+    unsigned int wordStart = 0, wordEnd = 0, readPosition = 0;
+    
+    while( s[ readPosition ] != '\0' )
+    {
+        if( s[ readPosition ] == ' ' )
+        {
+            readPosition++;
+        }
+        else
+        {
+            wordStart = readPosition;
+            
+            while( s[ readPosition ] != ' ' && s[ readPosition ] != '\0' )
+            {
+                readPosition++;
+            }
+            
+            wordEnd = readPosition - 1;
+            
+            reverseString( s, wordStart, wordEnd );
+        }
+    }
+}

@@ -47,14 +47,17 @@ bool CheckIfMatches( char *pattern , char *source )
 
 int main()
 {
-	printf("\n CheckIfMatches(\"g*ks\", \"geeks\") : %d. \n", CheckIfMatches("g*ks", "geeks") );
-	printf("\n CheckIfMatches(\"ge?ks*ge?ks\", \"geeksforgeeks\") : %d. \n", CheckIfMatches("ge?ks*geeks", "geeksforgeeks") );
-	printf("\n CheckIfMatches(\"g*k\", \"gee\") : %d. \n", CheckIfMatches("g*k", "gee") );
-	printf("\n CheckIfMatches(\"pqrs\", \"pqrst\") : %d. \n", CheckIfMatches("pqrs", "pqrst") );
-	printf("\n CheckIfMatches(\"abc*bcd\", \"abcdhghgbcd\") : %d. \n", CheckIfMatches("abc*bcd", "abcdhghgbcd") );
-	printf("\n CheckIfMatches(\"abc*c?d\", \"abcdhghgbcd\") : %d. \n", CheckIfMatches("abc*c?d", "abcdhghgbcd") );
-	printf("\n CheckIfMatches(\"*c*d\", \"abcd\") : %d. \n", CheckIfMatches("*c*d", "abcd") );
-	printf("\n CheckIfMatches(\"*?c*d\", \"abcd\") : %d. \n", CheckIfMatches("*?c*d", "abcd") );
+//	printf("\n CheckIfMatches(\"g*ks\", \"geeks\") : %d. \n", CheckIfMatches("g*ks", "geeks") );
+//	printf("\n CheckIfMatches(\"ge?ks*ge?ks\", \"geeksforgeeks\") : %d. \n", CheckIfMatches("ge?ks*geeks", "geeksforgeeks") );
+//	printf("\n CheckIfMatches(\"g*k\", \"gee\") : %d. \n", CheckIfMatches("g*k", "gee") );
+//	printf("\n CheckIfMatches(\"pqrs\", \"pqrst\") : %d. \n", CheckIfMatches("pqrs", "pqrst") );
+//	printf("\n CheckIfMatches(\"abc*bcd\", \"abcdhghgbcd\") : %d. \n", CheckIfMatches("abc*bcd", "abcdhghgbcd") );
+//	printf("\n CheckIfMatches(\"abc*c?d\", \"abcdhghgbcd\") : %d. \n", CheckIfMatches("abc*c?d", "abcdhghgbcd") );
+//	printf("\n CheckIfMatches(\"*c*d\", \"abcd\") : %d. \n", CheckIfMatches("*c*d", "abcd") );
+//	printf("\n CheckIfMatches(\"*?c*d\", \"abcd\") : %d. \n", CheckIfMatches("*?c*d", "abcd") );
+
+	printf("\n %d. \n", CheckIfMatches("*****b*aba***babaa*bbaba***a*aaba*b*aa**a*b**ba***a*a*",
+                        "aaaabaaaabbbbaabbbaabbaababbabbaaaababaaabbbbbbaabbbabababbaaabaabaaaaaabbaabbbbaababbababaabbbaababbbba"));
 	
 	return 0;
 }
