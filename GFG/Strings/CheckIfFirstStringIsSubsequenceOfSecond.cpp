@@ -27,7 +27,7 @@ bool CheckIfSubsequence_Recursive( string pattern, string source, int patternLen
 
 bool CheckIfSubsequence_Iterative( string pattern, string source, int patternLen, int sourceLen )
 {
-	unsigned int i =0, j =0;
+	unsigned int i = 0, j = 0;
 
 	for( i = 0; i < sourceLen && j < patternLen; i++ )
 	{

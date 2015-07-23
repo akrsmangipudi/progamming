@@ -33,7 +33,7 @@ unsigned int NumOfCustomersWithoutComputers( unsigned int numOfComputers, string
 			// User was holding a computer resource, once the user leaves, increase the 'numOfComputers' count.
 			if( true == t.second )
 			{
-				numOfComputers++;				
+				numOfComputers++;	
 			}
 			hashMap.erase( arrivalSequence[ i ] );
 		}

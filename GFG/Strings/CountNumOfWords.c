@@ -16,25 +16,21 @@ unsigned int NumberOfWords( char *inputStr )
 	}
 
 	while( *inputStr != '\0' )
-	{
+	{		
 		if( *inputStr == ' ' || *inputStr == '\n' || *inputStr == '\t' )
 		{
-			retVal++;
-			inputStr++;
-
 			while( *inputStr != '\0' && ( *inputStr == ' ' || *inputStr == '\n' || *inputStr == '\t' ) )
 			{
 				inputStr++;
 			}
-
-			if( *inputStr == '\0' )
-			{
-				break;
-			}
 		}
 		else
 		{
-			inputStr++;
+			retVal++;
+			while( *inputStr != '\0' && !( *inputStr == ' ' || *inputStr == '\n' || *inputStr == '\t' ) )
+			{
+				inputStr++;
+			}
 		}
 	}
 	return retVal;
@@ -42,7 +38,7 @@ unsigned int NumberOfWords( char *inputStr )
 
 int main()
 {
-	char inputStr[]  = "   One two          three\n  four\nfive\n";
+	char inputStr[]  = "   One two          three\n  four\nfive";
 
 	printf("\n Number of words in the given input string is: %d. \n", NumberOfWords( inputStr ) );
 	
